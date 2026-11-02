@@ -1,0 +1,64 @@
+Standard_Indoor_Gateway:
+  name: "Standard Indoor IoT Gateway"
+  description: "Designed for climate-controlled indoor deployment such as offices, data rooms, and labs."
+  min_temperature_c: 5.0
+  max_temperature_c: 40.0
+  min_humidity_pct: 10.0
+  max_humidity_pct: 75.0
+  min_pressure_hpa: 700.0
+  max_pressure_hpa: 1080.0
+  required_parameters:
+    - "temperature_c"
+    - "humidity_pct"
+  safety_margins:
+    temperature_c: 3.0
+    humidity_pct: 5.0
+
+Outdoor_Rugged_Sensor:
+  name: "Outdoor Rugged Telemetry Node"
+  description: "Weather-resistant IP67 rated enclosure for outdoor environmental monitoring."
+  min_temperature_c: -20.0
+  max_temperature_c: 55.0
+  min_humidity_pct: 5.0
+  max_humidity_pct: 95.0
+  min_pressure_hpa: 600.0
+  max_pressure_hpa: 1100.0
+  required_parameters:
+    - "temperature_c"
+    - "humidity_pct"
+    - "pressure_hpa"
+  safety_margins:
+    temperature_c: 5.0
+    humidity_pct: 5.0
+
+Cold_Storage_Tracker:
+  name: "Cold Chain Storage Tracker"
+  description: "Monitoring pharmaceuticals, refrigerated cargo, and cold room freezers."
+  min_temperature_c: -30.0
+  max_temperature_c: 4.0
+  min_humidity_pct: 20.0
+  max_humidity_pct: 85.0
+  min_pressure_hpa: 700.0
+  max_pressure_hpa: 1100.0
+  required_parameters:
+    - "temperature_c"
+    - "humidity_pct"
+  safety_margins:
+    temperature_c: 2.0
+    humidity_pct: 5.0
+
+Industrial_Equipment_Monitor:
+  name: "Industrial Factory Floor Monitor"
+  description: "Designed for high-heat, high-vibration manufacturing environments."
+  min_temperature_c: -10.0
+  max_temperature_c: 70.0
+  min_humidity_pct: 5.0
+  max_humidity_pct: 90.0
+  min_pressure_hpa: 600.0
+  max_pressure_hpa: 1100.0
+  required_parameters:
+    - "temperature_c"
+    - "humidity_pct"
+  safety_margins:
+    temperature_c: 5.0
+    humidity_pct: 5.0

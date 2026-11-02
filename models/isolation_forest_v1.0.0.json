@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "trained_at": "2026-10-13T07:41:40.795344+00:00",
+  "n_samples": 1440,
+  "features": [
+    "temperature_c",
+    "humidity_pct",
+    "pressure_hpa"
+  ],
+  "imputation_medians": {
+    "temperature_c": 22.01,
+    "humidity_pct": 49.945,
+    "pressure_hpa": 1013.22
+  },
+  "n_estimators": 100,
+  "contamination": 0.05,
+  "decision_threshold": -0.05,
+  "random_state": 42,
+  "score_stats": {
+    "min": -0.06949875261971672,
+    "max": 0.09931467021243617,
+    "mean": 0.0547780859752226
+  }
+}

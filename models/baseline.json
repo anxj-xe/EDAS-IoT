@@ -1,0 +1,39 @@
+{
+  "status": "READY",
+  "calibration_timestamp": "2026-10-13T07:41:39.913406+00:00",
+  "dataset_name": "baseline_normal.csv",
+  "sample_count": 1440,
+  "parameters": {
+    "temperature_c": {
+      "count": 1440,
+      "mean": 22.012013888888887,
+      "std": 2.144791638885617,
+      "min": 18.37,
+      "max": 25.75,
+      "median": 22.01,
+      "q25": 19.89,
+      "q75": 24.13
+    },
+    "humidity_pct": {
+      "count": 1440,
+      "mean": 50.02651388888889,
+      "std": 5.766255982954672,
+      "min": 39.57,
+      "max": 60.59,
+      "median": 49.945,
+      "q25": 44.48,
+      "q75": 55.61
+    },
+    "pressure_hpa": {
+      "count": 1440,
+      "mean": 1013.2435416666668,
+      "std": 1.0866317434463177,
+      "min": 1011.2,
+      "max": 1015.53,
+      "median": 1013.22,
+      "q25": 1012.21,
+      "q75": 1014.3
+    }
+  },
+  "epsilon": 1e-6
+}

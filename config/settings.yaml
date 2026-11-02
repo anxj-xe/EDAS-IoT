@@ -1,0 +1,51 @@
+app:
+  name: "EDAS-IoT"
+  version: "1.0.0"
+  description: "Environmental Anomaly Detection and IoT Deployment Readiness System"
+  default_device_id: "environment_node_01"
+
+storage:
+  database_path: "data/edas_iot.db"
+  raw_data_dir: "data/raw"
+  processed_data_dir: "data/processed"
+  samples_dir: "data/samples"
+  models_dir: "models"
+
+physical_limits:
+  temperature_c:
+    min: -40.0
+    max: 85.0
+  humidity_pct:
+    min: 0.0
+    max: 100.0
+  pressure_hpa:
+    min: 300.0
+    max: 1100.0
+
+detection:
+  statistical:
+    z_score_threshold: 3.0
+    rolling_window_size: 10
+    rolling_z_threshold: 2.5
+    min_history_for_rolling: 5
+    stuck_sensor_window: 5
+    epsilon: 1.0e-6
+  isolation_forest:
+    n_estimators: 100
+    contamination: 0.05
+    decision_threshold: -0.05
+    random_state: 42
+    features:
+      - "temperature_c"
+      - "humidity_pct"
+      - "pressure_hpa"
+
+assessment:
+  default_profile: "Standard_Indoor_Gateway"
+  assessment_window_size: 20
+  min_assessment_samples: 10
+  readiness_threshold_pct: 90.0 # At least 90% of samples in window must be in spec for READY
+
+api:
+  host: "127.0.0.1"
+  port: 8000
